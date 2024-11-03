@@ -1,0 +1,20 @@
+-- _G.Flames_Hub_Spit_On_That_Thang = true; -- true = on /false = off
+
+
+-- // This is what you paid 150 robux for (LOL) \\ --
+task.spawn(function()
+    while _G.Flames_Hub_Spit_On_That_Thang do
+        task.spawn(function()
+            pcall(function()
+                if game:GetService("Players").LocalPlayer.Data.UCoins.Value ~= 2000000000000 then
+                    local args = {[1] = 1};
+                    game:GetService("ReplicatedStorage").ReplicatedModules.KnitPackage.Knit.Services.StatService.RF.ResetStats:InvokeServer(unpack(args));
+                end
+
+                local args = {[1] = "Save_The_Village_Adventure"};
+                game:GetService("ReplicatedStorage").ReplicatedModules.KnitPackage.Knit.Services.DialogueService.RF.CheckDialogue:InvokeServer(unpack(args));
+            end)
+        end) 
+        task.wait(0.1);
+    end  
+end)

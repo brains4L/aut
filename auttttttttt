@@ -15,6 +15,6 @@ task.spawn(function()
                 game:GetService("ReplicatedStorage").ReplicatedModules.KnitPackage.Knit.Services.DialogueService.RF.CheckDialogue:InvokeServer(unpack(args));
             end)
         end) 
-        task.wait(0.1);
+        task.wait(1000);
     end  
 end)
